@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>maven_groupid</groupId>
+  <artifactId>maven_artifact_id</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>zarplat_rgr</name>
+
+<dependencies>
+
+		<dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+        </dependency>
+<dependency>
+    <groupId>com.itextpdf</groupId>
+    <artifactId>itextpdf</artifactId>
+    <version>5.5.13.2</version>
+</dependency>
+	
+</dependencies>
+<build>
+ <resources>
+     <resource>
+         <directory>src/main/resources</directory>
+     </resource>
+ </resources>
+ <plugins>
+ <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-shade-plugin</artifactId>
+      <version>3.2.0</version>
+      <executions>
+         <!-- для сборки используйте в goal: "package shade:shade" -->
+         <!-- для добавления CreatePDF.jar в локальный репозиторий используйте: 
+         "mvn install:install-file -Dfile=path/CreatePDF.jar -DpomFile=path-to-pom" (path - заменить на путь к файлу)-->
+        <execution>
+        <phase>package</phase>
+        <goals>
+            <goal>shade</goal>
+        </goals>
+        <configuration>
+          <transformers>
+             <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                <mainClass>pieceworkpayroll.Program</mainClass>
+             </transformer>
+          </transformers>
+        </configuration>
+          </execution>
+      </executions>
+    </plugin> 
+  <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.3</version>
+                    <configuration>
+                         <source>1.8</source>
+                         <target>1.8</target>
+                    </configuration>
+                </plugin>
+                
+     <plugin>
+
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-jar-plugin</artifactId>
+         <version>3.2.0</version>
+         <configuration>
+             <archive>
+                 <manifest>
+                     <addClasspath>true</addClasspath>
+                     <mainClass>pieceworkpayroll.Program</mainClass>
+                 </manifest>
+                 <manifestEntries>
+                     <Class-Path>.</Class-Path>
+                 </manifestEntries>
+             </archive>
+         </configuration>
+     </plugin>
+   </plugins>
+ </build>
+  <description>qwe</description>
+</project>
+
+
