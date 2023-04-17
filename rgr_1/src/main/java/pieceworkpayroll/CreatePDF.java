@@ -232,4 +232,3 @@ public void addTable(Document document, PdfPTable Table) {
 
 
 }
-

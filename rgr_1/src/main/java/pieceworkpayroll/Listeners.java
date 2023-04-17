@@ -40,7 +40,13 @@ public class Listeners {
 		
 		ActionListener actiongrafik = new ListenerPDF();
 		Designer.PDFnew.addActionListener(actiongrafik);
-		
+		Designer.ExitButt.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Закрытие приложения
+                System.exit(0);
+            }
+        });
 		
 		// Добавляем соданные обработчики для:
 		Designer.jSpinnerDetailsCount.addChangeListener(calculatingChangeListener); // Спиннера числа деталей

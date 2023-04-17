@@ -85,7 +85,7 @@ public class Designer {
     
     public static JButton PDFnew = new JButton("PDF");
 
-	
+    public static JButton ExitButt = new JButton("Выход");
     // Инициализация интерфейса
 	public static void initialize() {
         JFrame frame = createFrame(); // Создаём фрейм
@@ -127,5 +127,6 @@ public class Designer {
         container.add(jLabelPersonalIncomeTaxDeduction);
         container.add(jLabelSalary);
         container.add(PDFnew);
+        container.add(ExitButt);
 	}
 }
