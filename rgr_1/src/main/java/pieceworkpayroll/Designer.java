@@ -11,11 +11,6 @@ import javax.swing.JLabel;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 
-
-
-
-
-
 //  ласс, отвечающий за визуальную часть программы, т.е. интерфейс
 public class Designer {
 	private Designer() {} //  ласс €вл€етс€ утилитой (статичен) и не имеет экземпл€ров
