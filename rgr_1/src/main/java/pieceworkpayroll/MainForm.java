@@ -59,6 +59,7 @@ public class MainForm {
 	    }
 	}
 	
+	
 	// Функция для получения параметров, необходимых для подсчёта налогового вычета и чистой зарплаты
 	// От дизайнера
 	 public static CalculatingParams readParams() {

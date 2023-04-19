@@ -8,7 +8,6 @@ import java.awt.event.ItemListener;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-
 //  ласс, отвечающий за добавлени€ обработчиков событий дл€ компонентов, созданных дизайнером
 public class Listeners {
 	private Listeners() {} //  ласс €вл€етс€ утилитой (статичен) и не имеет экземпл€ров
